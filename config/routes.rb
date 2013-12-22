@@ -5,6 +5,6 @@ FinalProjectApp::Application.routes.draw do
   resources :goals  
   get '/auth/:provider/callback', to: 'sessions#create'
   devise_scope :user do
-  	get 'sign_out', :to => 'devise/sessions#destroy', as => :destroy_user_session 
+  	get 'sign_out', :to => 'devise/sessions#destroy'
   end 
 end

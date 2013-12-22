@@ -12,6 +12,14 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
+
+  config.omniauth :linkedin, consumer_key: ENV["MY_API_KEY"], consumer_secret: ENV["MY_API_SECRET"], :scope => 'r_fullprofile r_emailaddress r_network'
+
+
+# consumer key: 77zhrwvycojuor, consumer secret: 2LtL8yw1DOaTjmJE
+
+  # config.omniauth :linkedin, 77zhrwvycojuor, 2LtL8yw1DOaTjmJE, :scope => 'r_fullprofile r_emailaddress r_network'
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 

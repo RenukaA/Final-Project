@@ -32,7 +32,7 @@ gem 'devise', '~>3.2.2'
 gem 'omniauth'
 
 gem 'omniauth-linkedin'
-	
+	 
 group :development, :test do
   gem 'quiet_assets'
   gem 'rspec-rails'
