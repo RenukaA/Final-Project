@@ -33,6 +33,12 @@ gem 'devise', '~>3.2.2'
 gem 'omniauth'
 
 gem 'omniauth-linkedin'
+
+gem 'rails_12factor', group: :production
+
+gem 'pg'
+
+ruby '2.0.0'
 	 
 group :development, :test do
   gem 'quiet_assets'
