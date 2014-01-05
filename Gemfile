@@ -37,6 +37,8 @@ gem 'rails_12factor', group: :production
 
 gem 'pg'
 
+gem 'linkedin'
+
 ruby '2.0.0'
 	 
 group :development, :test do
