@@ -1,6 +1,6 @@
 <h1>New Goal</h1>
 
-<%= form_for :goal, url: goals_path do |f| %>
+<%= form_for :goal, url: new_goal_path do |f| %>
  
 <% if @goal.errors.any? %>
   <div id="error_explanation">
@@ -40,4 +40,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', goals_path %>
+<%= link_to 'Goal Index', goals_path %>
