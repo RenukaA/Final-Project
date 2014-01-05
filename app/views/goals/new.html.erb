@@ -1,47 +1,5 @@
 <h1><b><u>New Goal</u></b></h1>
 
-<%= form_for @goal do |f| %>
-
-<% if @goal.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@goal.errors.count, "error") %> prohibited
-      this goal from being saved:</h2>
-    <ul>
-    <% @goal.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-  <% end %>
-
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
- 
-  <p>
-    <%= f.label :steps_needed %><br>
-    <%= f.text_area :steps_needed %>
-  </p>
- 
-  <p>
-    <%= f.label :steps_achieved %><br>
-    <%= f.text_area :steps_achieved %>
-  </p>
-
-  <p>
-    <%= f.label :priority %><br>
-    <%= f.text_area :priority %>
-  </p>
-
-<p>
-    <%= f.label :target_date %><br>
-    <%= f.text_area :target_date %>
-</p>    
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'goalform' %>
 
 <%= link_to 'Goal Index', goals_path %>

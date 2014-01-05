@@ -1,34 +1,36 @@
 <h1><b><u>Goal Index</u></b></h1>
- 
+
 <% @goals.each do |goal| %>
 
 <p>
   <strong>Goal:</strong>
-  <%= @goal.title %>
+  <%= goal.title %>
 </p>
 
 <p>
   <strong>Steps Needed:</strong>
-  <%= @goal.steps_needed %>
+  <%= goal.steps_needed %>
 </p>
 
 <p>
   <strong>Steps Achieved:</strong>
-  <%= @goal.steps_achieved %>
+  <%= goal.steps_achieved %>
 </p>
 
 <p>
   <strong>Priority:</strong>
-  <%= @goal.priority %>
+  <%= goal.priority %>
 </p>
 
 <p>
   <strong>Target Date:</strong>
-  <%= @goal.target_date %>
+  <%= goal.target_date %>
 </p>
 
+<p><%= link_to "Edit", edit_goal_path(goal)%></p><p><%= link_to "Delete", goal_path(goal), method: :delete %></p>     
 
-<p><%= link_to "Edit", edit_goal_path %></p>      
+<% end %> 
+
 <p><%= link_to "Home", root_path %></p>
 
 

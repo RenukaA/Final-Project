@@ -5,10 +5,10 @@ class GoalsController < ApplicationController
 	end
 	
 	def create 
-		@goal = Goal.new(params[:goal].permit(:title, :steps_needed, :steps_achieved, :priority, :text))
+		@goal = Goal.new(params[:goal].permit(:title, :steps_needed, :steps_achieved, :priority, :target_date))
 
 		if @goal.save
-			redirect_to @goal 
+			redirect_to goals_path
 		else 
 			render 'new'
 		end 
