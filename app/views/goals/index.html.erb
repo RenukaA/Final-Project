@@ -1,18 +1,34 @@
 <h1><b><u>Goal Index</u></b></h1>
  
-  <% @goals.each do |goal| %>
-    <tr>
-      <td><b><%= goal.title %></b></td>
-      <td><p><%= goal.steps_needed %></p></td>
-      <td><p><%= goal.steps_achieved %></p></td>
-      <td><p><%= goal.priority %></p></td>
-      <td><p><%= goal.target_date %></p></td>
-	  <td><p><%= link_to "Show", goal%></p></p>      
-    </tr>
-  <% end %>
-</table>
+<% @goals.each do |goal| %>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @goal.title %>
+</p>
+
+<p>
+  <strong>Steps Needed:</strong>
+  <%= @goal.steps_needed %>
+</p>
+
+<p>
+  <strong>Steps Achieved:</strong>
+  <%= @goal.steps_achieved %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @goal.priority %>
+</p>
+
+<p>
+  <strong>Target Date:</strong>
+  <%= @goal.target_date %>
+</p>
 
 
-<p><%= link_to "Back", root_path %></p>
+<p><%= link_to "Edit", goal%></p>      
+<p><%= link_to "Home", root_path %></p>
 
 
