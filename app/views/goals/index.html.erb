@@ -1,20 +1,13 @@
 <h1><b><u>Goal Index</u></b></h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
  
   <% @goals.each do |goal| %>
     <tr>
-      <td><%= goal.title %></td>
-      <td><%= goal.steps_needed %></td>
-      <td><%= goal.steps_achieved %></td>
-      <td><%= goal.priority %></td>
-      <td><%= goal.target_date %></td>
-	  <td><%= link_to "Show", goal%></p>      
-      <!-- add remaining fields -->
+      <td><b><%= goal.title %></b></td>
+      <td><p><%= goal.steps_needed %></p></td>
+      <td><p><%= goal.steps_achieved %></p></td>
+      <td><p><%= goal.priority %></p></td>
+      <td><p><%= goal.target_date %></p></td>
+	  <td><p><%= link_to "Show", goal%></p></p>      
     </tr>
   <% end %>
 </table>
