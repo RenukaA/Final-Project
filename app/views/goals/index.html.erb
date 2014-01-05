@@ -1,2 +1,21 @@
 <h1><b><u>Goal Index</u></b></h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @goals.each do |goal| %>
+    <tr>
+      <td><%= goal.title %></td>
+      <td><%= goal.steps_needed %></td>
+      <td><%= goal.steps_achieved %></td>
+      <td><%= goal.priority %></td>
+    </tr>
+  <% end %>
+</table>
+
+
 <p><%= link_to "Back", root_path %></p>
+
