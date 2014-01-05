@@ -1,5 +1,5 @@
 class GoalsController < ApplicationController
-
+before_action :set_goal, only: [:edit, :destroy]
 	def new 
 		@goal = Goal.new 
 	end
@@ -14,12 +14,22 @@ class GoalsController < ApplicationController
 		end 
 	end 
 
-	def show 
-		@goal = Goal.find(params[:id])
+	def edit 
 	end 
 
 	def index 
 		@goals = Goal.all 
+	end 
+
+	def destroy
+		@goal.delete
+		redirect_to goals_path
+	end 
+
+private 
+
+	def set_goal 
+		@goal = Goal.find(params[:id])
 	end 
 
 end
