@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140105203822) do
+ActiveRecord::Schema.define(version: 20140109004459) do
+
+  create_table "connections", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "goals", force: true do |t|
     t.datetime "created_at"
@@ -39,6 +44,8 @@ ActiveRecord::Schema.define(version: 20140105203822) do
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
+    t.string   "li_token"
+    t.string   "li_secret"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

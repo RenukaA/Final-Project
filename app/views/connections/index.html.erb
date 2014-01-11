@@ -1,0 +1,14 @@
+<%= link_to "Home", root_path %>
+
+<h1><b><u><center>Connections Index</center></u></b></h1>
+
+<%= @connections['all'].each do |connection| %>
+
+<p><b><%= connection.first_name %></b>&nbsp;<b><%= connection.last_name %></b></p>
+<p><b><%= connection.headline %></b></p>
+<p><b><%= connection.industry %></b></p>	
+
+<% end %>
+<%= debug @connections %>
+
+

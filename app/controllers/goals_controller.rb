@@ -1,5 +1,6 @@
 class GoalsController < ApplicationController
 before_action :set_goal, only: [:edit, :destroy]
+	
 	def new 
 		@goal = Goal.new 
 	end

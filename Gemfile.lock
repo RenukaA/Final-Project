@@ -60,6 +60,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    event-calendar (2.3.3)
     execjs (2.0.2)
     hashie (2.0.5)
     hike (1.2.3)
@@ -183,6 +184,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   debugger
   devise (~> 3.2.2)
+  event-calendar
   jbuilder (~> 1.2)
   jquery-rails
   linkedin

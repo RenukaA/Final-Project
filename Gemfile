@@ -36,6 +36,8 @@ gem 'rails_12factor', group: :production
 
 gem 'pg'
 
+gem 'event-calendar'
+
 gem 'linkedin'
 
 ruby '2.0.0'
