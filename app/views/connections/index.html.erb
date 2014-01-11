@@ -4,9 +4,10 @@
 
 <%= @connections['all'].each do |connection| %>
 
-<p><b><%= connection.first_name %></b>&nbsp;<b><%= connection.last_name %></b></p>
-<p><b><%= connection.headline %></b></p>
+<p><b><u><%= connection.first_name %></u></b><u>&nbsp;</u><b><u><%= connection.last_name %></u></b></p>
+<p><b><i><%= connection.headline %></i></b></p>
 <p><b><%= connection.industry %></b></p>	
+<%= image_tag connection.picture_url %>
 
 <% end %>
 <%= debug @connections %>
