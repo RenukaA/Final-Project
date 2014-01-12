@@ -14,4 +14,6 @@
 // = require jquery_ujs
 // = require bootstrap
 // = require turbolinks
+// = require list.min
+// = require list.pagination.min
 // = require_tree .

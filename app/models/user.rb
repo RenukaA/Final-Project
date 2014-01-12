@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:linkedin] 
+  has_many :connections
 
   def self.new_with_session(params, session)
   	super.tap do |user|
@@ -35,7 +36,7 @@ class User < ActiveRecord::Base
   	end
   end
 
-  def connections
-  	@connections ||= linkedin.connections(:fields => ["id", "first_name", "last_name", "headline", "industry", "picture_url"])
+  def linked_in_connections
+  	@linked_in_connections ||= linkedin.connections(:fields => ["id", "first_name", "last_name", "headline", "industry", "picture_url"])
   end
 end

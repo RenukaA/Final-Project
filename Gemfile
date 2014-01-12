@@ -36,7 +36,7 @@ gem 'rails_12factor', group: :production
 
 gem 'pg'
 
-gem 'event-calendar'
+gem 'paperclip', '~> 3.0'
 
 gem 'linkedin'
 

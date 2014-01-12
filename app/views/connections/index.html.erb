@@ -1,15 +1,29 @@
 <%= link_to "Home", root_path %>
 
-<h1><b><u><center>Connections Index</center></u></b></h1>
+<h1>
+	<b>
+		<u>
+			<center>
+				Connections Index
+			</center>
+		</u>
+	</b>
+</h1>
 
-<%= @connections['all'].each do |connection| %>
-
-<p><b><u><%= connection.first_name %></u></b><u>&nbsp;</u><b><u><%= connection.last_name %></u></b></p>
-<p><b><i><%= connection.headline %></i></b></p>
-<p><b><%= connection.industry %></b></p>	
-<%= image_tag connection.picture_url %>
-
-<% end %>
-<%= debug @connections %>
-
-
+<div id="test-list">
+    <input type="text" class="search" />
+    <ul class="list">
+    	<%= @connections['all'].each do |connection| %>
+			<li>
+				<p class="name"><b><u><%= connection.first_name %>&nbsp;<%= connection.last_name %></b></u></p>
+				<p><b><i><%= connection.headline %></i></b></p>
+				<p><b><%= connection.industry %></b></p>	
+				<%= image_tag connection.picture_url %>
+				<%= link_to "Edit Connection", search_connections_path(linkedin_id: connection.id) %>
+			</li>
+    	<% end %>
+	</ul>
+	<ul class="pagination"></ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<p>
+  <strong>Context of Introduction:</strong>
+  <%= @connection.context_of_introduction %>
+</p>
+
+<p>
+  <strong>Role or Purpose:</strong>
+  <%= @connection.role_or_purpose %>
+</p>
+
+<p>
+  <strong>Last Communication Date:</strong>
+  <%= @connection.last_communication_date %>
+</p>
+
+<p>
+  <strong>Next Communication Date:</strong>
+  <%= @connection.next_communication_date %>
+</p>
+
+<p><%= link_to "Edit", edit_connection_path(current_user)%></p>
+<p><%= link_to "Connections Index", user_connection_path(current_user)%></p>
+<p><%= link_to "Home", root_path %></p>
