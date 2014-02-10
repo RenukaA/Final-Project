@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   		u.password = Devise.friendly_token[0,20]
   		u.li_token = auth.credentials.token
   		u.li_secret = auth.credentials.secret
-  		u.save
+  		u.save  
   	end    
   end
 
