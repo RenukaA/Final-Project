@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140111211824) do
+ActiveRecord::Schema.define(version: 20140210040636) do
 
   create_table "connections", force: true do |t|
     t.datetime "created_at"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140111211824) do
     t.string   "steps_achieved"
     t.integer  "priority"
     t.datetime "target_date"
+    t.string   "type"
   end
 
   create_table "users", force: true do |t|

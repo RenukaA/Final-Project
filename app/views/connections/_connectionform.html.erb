@@ -24,12 +24,12 @@
 
   <p>
     <%= f.label :last_communication_date, "Last Communication Date" %><br>
-    <%= f.date_select :last_communication_date %>
+    <%= select_month(Date.today) %><%= select_year(Date.today) %>
   </p>
 
 <p>
     <%= f.label :next_communication_date, "Next Communication Date" %><br>
-    <%= f.date_select :next_communication_date %>
+    <%= select_month(Date.today) %><%= select_year(Date.today) %>
 </p>    
 
 <%= f.hidden_field :linkedin_id %>
