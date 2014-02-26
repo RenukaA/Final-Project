@@ -7,9 +7,32 @@
 		<p>And he's watching us all with the eye of the tiger."</p>
 	<blockquote>Survivor (<u>Rocky</u> Soundtrack)</blockquote></i>
 
-<font face="Cambria"><p>As these lyrics advise, <u><b>you</b></u> must rise up to the challenge of planning <u><b>your</u></b> own career. Congratulations on proactively taking the first step with Tiger's Eye, a premium career management system. Let's get started!</p></font>
+<br><br>
+
+<font face="Cambria"><p>Welcome to Tiger's Eye, a premium career management system</p></font>
 
 <br><br>
 
-<p><%= render "devise/shared/links" %></p>
+<font face="Cambria"><p>Please enter your name and e-mail so we can keep you posted on exciting developments</p><font face="Cambria">
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name %></div>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <br><br>
+
+  <div><%= f.submit "Keep Me Updated" %></div>
+
+<% end %>
+
+<br><br>
+
+
+
+
 
