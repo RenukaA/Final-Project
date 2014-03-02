@@ -1,7 +1,11 @@
-# class AdminsController < ApplicationController
-# before_action :authenticate_user!
+class AdminsController < ApplicationController
+before_action :authenticate_user!
 
-#   def index
-#   end
+  def new 
+	@admnin = Admin.new 
+  end
    
-# end
+  def show
+  end 
+
+end
